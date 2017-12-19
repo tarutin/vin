@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>VIN</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic' rel='stylesheet'/>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css' rel='stylesheet'/>
+        <link href='https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css' rel='stylesheet'/>
+        <style>
+            app { display:block; width:30%; min-width:400px; margin:10% auto; }
+            app input[type=submit] { width:100%; }
+            app table { display:none; }
+            app table th { cursor:pointer; }
+            app table th:hover { color:#9b4dca; }
+            app table th[sort=asc]:after { content:'  ↓' }
+            app table th[sort=desc]:after { content:'  ↑' }
+            app .connection { display:none; margin-bottom:20px; padding:10px; text-align:center; background:#db6868; color:#fff; }
+        </style>
+    </head>
+    <body>
+        <app>
+            <div class='connection'>No Internet connection</div>
+            <form>
+                <input type='text' name='vin' placeholder='VIN'/>
+                <input type='submit' name='submit' value='GET' disabled/>
+            </form>
+            <table>
+                <thead>
+                    <tr class='sort'>
+                        <th>Variable</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr class='search'>
+                        <th><input type='search' name='search' placeholder='Search'/></th>
+                        <th><input type='search' name='search' placeholder='Search'/></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <blockquote>
+                <p><em>Source: <a href='./vin.js' target='_blank'>vin.js</a></em></p>
+            </blockquote>
+        </app>
+    </body>
+    <script src='./vin.js'></script>
+</html>
