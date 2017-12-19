@@ -101,7 +101,10 @@ const vin = {
     get(cb) {
         if ((data = vin.storage.get(vin.key))) {
             cb(data)
-        } else if (vin.isOnline) {
+        }
+        else {
+            if(!vin.isOnline()) return false
+
             let apiUrl = vin.api.replace('{VIN}', vin.key)
             let req = new XMLHttpRequest()
 
