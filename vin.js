@@ -34,8 +34,7 @@ const vin = {
 
             if (vin.filters.search) {
                 list = list.filter(function(a, b) {
-                    let str =
-                        typeof a[vin.filters.searchindex] == 'string' ? a[vin.filters.searchindex].toUpperCase() : null
+                    let str = typeof a[vin.filters.searchindex] == 'string' ? a[vin.filters.searchindex].toUpperCase() : null
 
                     if (str) {
                         let search = vin.filters.search.toUpperCase()
